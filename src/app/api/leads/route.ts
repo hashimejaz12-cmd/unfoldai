@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           from: "Unfold AI <hello@unfoldai.net>",
-          to: process.env.ADMIN_EMAIL || "hello@unfoldai.net",
+          to: process.env.ADMIN_EMAIL || "hashimejaz12@gmail.com",
           subject: `🔥 New Lead: ${lead.name || lead.email}`,
           html: `
             <h2>New Lead from unfoldai.net!</h2>
