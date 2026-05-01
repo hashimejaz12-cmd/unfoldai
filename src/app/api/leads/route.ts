@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
           Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
         },
         body: JSON.stringify({
-          from: "Unfold AI <onboarding@resend.dev>",
+          from: "Unfold AI <hello@unfoldai.net>",
           to: process.env.ADMIN_EMAIL || "hello@unfoldai.net",
           subject: `🔥 New Lead: ${lead.name || lead.email}`,
           html: `
