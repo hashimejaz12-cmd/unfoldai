@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-01T21:36:38.565Z",
+  "entries": {
+    "memory:memory/2026-04-30.md:1:24": {
+      "key": "memory:memory/2026-04-30.md:1:24",
+      "path": "memory/2026-04-30.md",
+      "startLine": 1,
+      "endLine": 24,
+      "source": "memory",
+      "snippet": "# 2026-04-30 ## Bootstrap - Came online for the first time - Hashim named me **Hash** ⚡ - Identity: digital familiar, casual and direct - Hashim is business-oriented, wants to make money online, based on US East Coast - Set up IDENTITY.md, USER.md, SOUL.md ## Unfold - AI Wellness Companion - Built full Next.js MVP, deployed to Vercel: https://unfold-woad.vercel.app - GitHub: hashimejaz12-cmd/unfold - Using OpenRouter API with GPT-4o-mini model - Domain: unfoldai.net (needs DNS setup still) - Features: CBT chat, mood tracking, session memory, 5 structured programs, daily check-ins, insights dashboard - Pricing: $0.99 starter, $9.99/mo Pro, $19.99/mo Unlimited - VPS: Hostinger, IP 177.7.50.2",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.2631030843200852,
+      "maxScore": 0.6315519078112285,
+      "firstRecalledAt": "2026-04-30T19:41:24.553Z",
+      "lastRecalledAt": "2026-05-01T14:54:55.539Z",
+      "queryHashes": [
+        "8cf46bf6b632",
+        "4b04f54345b0"
+      ],
+      "recallDays": [
+        "2026-04-30",
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "gpt",
+        "router",
+        "business-oriented",
+        "identity.md",
+        "user.md",
+        "soul.md",
+        "next.js",
+        "unfold-woad.vercel.app"
+      ]
+    },
+    "memory:memory/2026-05-01.md:31:58": {
+      "key": "memory:memory/2026-05-01.md:31:58",
+      "path": "memory/2026-05-01.md",
+      "startLine": 31,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "- Product Hunt launch - Direct outreach via LinkedIn DMs ## Technical Setup - VPS: 177.7.50.20 (Hostinger, Ubuntu 24.04, Docker) - OpenClaw running in Docker container: openclaw-yzlj-openclaw-1 - Traefik reverse proxy on host network - Vercel for deployments (both projects) - Resend for email (hello@unfoldai.net set up on Hostinger) - OpenRouter API key in use (new key after rotation) ## Cost/Model Changes - Switched main model: Opus 4.6 → Sonnet 4.6 - Switched sub-agents: Opus → Haiku 4.5 (to reduce costs) - Yesterday spent ~$50 on API calls (mostly Opus sub-agents) ## Status as of May 1 EOD - unfoldai.net LIVE on Vercel ✅ - Lead capture working → emails to hashimejaz12@gmail.com ✅ - DNS",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-01T21:36:38.565Z",
+      "lastRecalledAt": "2026-05-01T21:36:38.565Z",
+      "queryHashes": [
+        "cb092e78ec2b"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "network",
+        "router",
+        "177.7.50.20",
+        "24.04",
+        "openclaw-yzlj-openclaw-1",
+        "unfoldai.net",
+        "cost/model",
+        "4.6"
+      ]
+    }
+  }
+}
