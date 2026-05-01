@@ -1,11 +1,14 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { LeadCaptureModal } from "../components/LeadCaptureModal";
+import { EmailCaptureBar } from "../components/EmailCaptureBar";
+import { ExitIntentPopup } from "../components/ExitIntentPopup";
 
 /* ═══════════════════════════════════════════
    HERO
    ═══════════════════════════════════════════ */
-function Hero() {
+function Hero({ onOpenLeadModal }: { onOpenLeadModal: () => void }) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Orbs */}
@@ -43,12 +46,12 @@ function Hero() {
           >
             Try It Free →
           </button>
-          <a
-            href="#pricing"
+          <button
+            onClick={onOpenLeadModal}
             className="px-8 py-4 rounded-xl glass-card font-semibold text-lg hover:border-accent-blue/40 transition text-center"
           >
             Get Your AI →
-          </a>
+          </button>
         </div>
       </div>
     </section>
@@ -299,7 +302,7 @@ function Testimonials() {
 /* ═══════════════════════════════════════════
    PRICING
    ═══════════════════════════════════════════ */
-function Pricing() {
+function Pricing({ onOpenLeadModal }: { onOpenLeadModal: () => void }) {
   const plans = [
     { name: "Starter", price: "$29", setup: "$99 one-time setup", features: ["Web chat access", "Basic memory", "Email summaries"], popular: false },
     { name: "Professional", price: "$59", setup: "$149 one-time setup", features: ["WhatsApp + Telegram + Web", "Full memory & context", "Email management", "Calendar integration"], popular: true },
@@ -338,16 +341,16 @@ function Pricing() {
                   </li>
                 ))}
               </ul>
-              <a
-                href="mailto:hello@unfoldai.net"
-                className={`block text-center py-3 rounded-xl font-semibold transition ${
+              <button
+                onClick={onOpenLeadModal}
+                className={`block w-full text-center py-3 rounded-xl font-semibold transition ${
                   p.popular
                     ? "bg-gradient-to-r from-accent-blue to-accent-purple hover:opacity-90 neon-border"
                     : "glass-card hover:border-accent-blue/40"
                 }`}
               >
-                {p.popular ? "Get Started" : p.name === "Business" ? "Contact Us" : "Get Started"}
-              </a>
+                {p.popular ? "Claim Your Spot" : p.name === "Business" ? "Claim Your Spot" : "Claim Your Spot"}
+              </button>
             </div>
           ))}
         </div>
@@ -399,7 +402,7 @@ function FAQ() {
 /* ═══════════════════════════════════════════
    CTA
    ═══════════════════════════════════════════ */
-function FinalCTA() {
+function FinalCTA({ onOpenLeadModal }: { onOpenLeadModal: () => void }) {
   return (
     <section className="py-28 px-6 relative overflow-hidden">
       <div className="orb" style={{ width: 500, height: 500, background: "radial-gradient(circle, rgba(14,165,233,0.2), transparent 70%)", top: "0%", left: "50%", transform: "translateX(-50%)", position: "absolute", filter: "blur(100px)" }} />
@@ -408,12 +411,12 @@ function FinalCTA() {
           Ready to Get Your Own <span className="gradient-text glow-text">AI Assistant?</span>
         </h2>
         <p className="text-gray-400 text-lg mb-10">Join 50+ professionals who&apos;ve automated their work with Unfold AI.</p>
-        <a
-          href="mailto:hello@unfoldai.net"
+        <button
+          onClick={onOpenLeadModal}
           className="inline-block px-10 py-4 rounded-xl bg-gradient-to-r from-accent-blue to-accent-purple font-semibold text-lg hover:opacity-90 transition neon-border"
         >
           Get Started Today →
-        </a>
+        </button>
         <p className="text-gray-500 mt-6 text-sm">
           Questions?{" "}
           <a href="mailto:hello@unfoldai.net" className="text-accent-blue hover:underline">hello@unfoldai.net</a>
@@ -445,7 +448,7 @@ function Footer() {
 /* ═══════════════════════════════════════════
    CHAT WIDGET
    ═══════════════════════════════════════════ */
-function ChatWidget() {
+function ChatWidget({ onOpenLeadModal }: { onOpenLeadModal: () => void }) {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<{ role: string; content: string }[]>([
     { role: "assistant", content: "Hey! 👋 I'm a demo of your potential AI assistant. Ask me what I can do for your business — or just say 'hi'!" },
@@ -562,20 +565,24 @@ function ChatWidget() {
    PAGE
    ═══════════════════════════════════════════ */
 export default function Home() {
+  const [showLeadModal, setShowLeadModal] = useState(false);
+  const openLeadModal = () => setShowLeadModal(true);
+
   return (
     <main className="relative overflow-hidden">
-      <Hero />
+      <Hero onOpenLeadModal={openLeadModal} />
       <Problem />
       <Demo />
       <Features />
       <HowItWorks />
       <Comparison />
       <Testimonials />
-      <Pricing />
+      <Pricing onOpenLeadModal={openLeadModal} />
       <FAQ />
-      <FinalCTA />
+      <FinalCTA onOpenLeadModal={openLeadModal} />
       <Footer />
-      <ChatWidget />
+      <ChatWidget onOpenLeadModal={openLeadModal} />
+      <LeadCaptureModal isOpen={showLeadModal} onClose={() => setShowLeadModal(false)} source="cta_button" />
     </main>
   );
 }
