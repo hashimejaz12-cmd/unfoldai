@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Unfold AI — Your Own Personal AI Assistant. Set Up in 24 Hours.",
+  title: "UnfoldAI — AI Systems & Automation Solutions",
   description:
-    "A private AI assistant that knows your business, connects to your WhatsApp & email, and works while you sleep. Set up in 24 hours.",
+    "We design and deploy custom AI tools and intelligent agents that automate workflows, cut costs, and scale your operations—fast.",
   openGraph: {
-    title: "Unfold AI — Your Own Personal AI Assistant",
+    title: "UnfoldAI — AI Systems & Automation Solutions",
     description:
-      "A private AI assistant that connects to your WhatsApp & email. Set up in 24 hours.",
+      "Custom AI tools and intelligent agents that automate workflows, cut costs, and scale operations.",
     type: "website",
     url: "https://unfoldai.net",
-    siteName: "Unfold AI",
+    siteName: "UnfoldAI",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Unfold AI — Your Own Personal AI Assistant",
+    title: "UnfoldAI — AI Systems & Automation Solutions",
     description:
-      "A private AI assistant that connects to your WhatsApp & email. Set up in 24 hours.",
+      "Custom AI tools and intelligent agents that automate workflows, cut costs, and scale operations.",
   },
 };
 
@@ -34,7 +35,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-dark text-white antialiased">{children}</body>
+      <body className="bg-dark text-white antialiased">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
