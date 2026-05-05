@@ -1,0 +1,22 @@
+
+> unfoldai@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+Failed to compile.
+
+./src/components/AIDirectory.tsx:20:33
+Type error: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+
+[0m [90m 18 |[39m   [36mconst[39m [pricing[33m,[39m setPricing] [33m=[39m useState([32m'All'[39m)[33m;[39m[0m
+[0m [90m 19 |[39m[0m
+[0m[31m[1m>[22m[39m[90m 20 |[39m   [36mconst[39m categories [33m=[39m [[32m'All'[39m[33m,[39m [33m...[39m[36mnew[39m [33mSet[39m(tools[33m.[39mmap(t [33m=>[39m t[33m.[39mcategory))][33m.[39msort()[33m;[39m[0m
+[0m [90m    |[39m                                 [31m[1m^[22m[39m[0m
+[0m [90m 21 |[39m   [36mconst[39m pricingOptions [33m=[39m [[32m'All'[39m[33m,[39m [32m'Free'[39m[33m,[39m [32m'Paid'[39m[33m,[39m [32m'Unknown'[39m][33m;[39m[0m
+[0m [90m 22 |[39m[0m
+[0m [90m 23 |[39m   [36mconst[39m filtered [33m=[39m useMemo(() [33m=>[39m {[0m
+Next.js build worker exited with code: 1 and signal: null

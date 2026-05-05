@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import Navbar from "@/components/Navbar";
 
 // ── Data ────────────────────────────────────────────────────────────────────
 
@@ -146,11 +147,13 @@ export default function TokenCalculator() {
   // ── Render ───────────────────────────────────────────────────────────────
 
   return (
-    <main className="relative overflow-hidden min-h-screen">
-      <div className="orb orb-1" />
-      <div className="orb orb-2" />
-      <div className="orb orb-3" />
-      <div className="absolute inset-0 grid-bg" />
+    <>
+      <Navbar />
+      <main className="relative overflow-hidden min-h-screen">
+        <div className="orb orb-1" />
+        <div className="orb orb-2" />
+        <div className="orb orb-3" />
+        <div className="absolute inset-0 grid-bg" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-24">
         {/* Header */}
@@ -531,6 +534,7 @@ export default function TokenCalculator() {
           </div>
         )}
       </div>
-    </main>
+      </main>
+    </>
   );
 }

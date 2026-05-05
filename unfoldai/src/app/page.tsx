@@ -45,9 +45,29 @@ export default function Home() {
             <p className="mt-6 text-sm text-gray-500">
               Or explore our{" "}
               <a href="/tools/token-calculator" className="text-accent-blue hover:underline">
-                Free Token Calculator
+                Free AI Token Calculator
+              </a>
+              {" "}or{" "}
+              <a href="/directory" className="text-accent-blue hover:underline">
+                AI Tools Directory
               </a>
             </p>
+          </section>
+
+          {/* Quick Tools Section */}
+          <section className="max-w-6xl mx-auto px-6 py-12">
+            <div className="grid md:grid-cols-2 gap-6">
+              <a href="/tools/token-calculator" className="group glass-card p-8 hover:border-accent-blue/50 transition">
+                <div className="text-5xl mb-4">🧮</div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-accent-blue transition">Free AI Token Calculator</h3>
+                <p className="text-gray-400">Calculate costs for GPT-4, Claude, Gemini. Budget planner, token counter, and ROI calculator in one tool.</p>
+              </a>
+              <a href="/directory" className="group glass-card p-8 hover:border-accent-purple/50 transition">
+                <div className="text-5xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-accent-purple transition">AI Tools Directory</h3>
+                <p className="text-gray-400">Discover 1,500+ AI tools across 11 categories. Search, filter, and find the perfect AI software for your needs.</p>
+              </a>
+            </div>
           </section>
 
           {/* Problem Section */}
@@ -248,11 +268,14 @@ export default function Home() {
           {/* Footer */}
           <footer className="max-w-6xl mx-auto px-6 py-12 border-t border-white/10 text-center text-gray-500">
             <p>&copy; 2026 UnfoldAI. All rights reserved.</p>
-            <p className="mt-2">
+            <div className="mt-4 flex gap-6 justify-center">
               <a href="/tools/token-calculator" className="hover:text-accent-blue transition">
                 Token Calculator
               </a>
-            </p>
+              <a href="/directory" className="hover:text-accent-blue transition">
+                AI Tools Directory
+              </a>
+            </div>
           </footer>
         </div>
       </main>
